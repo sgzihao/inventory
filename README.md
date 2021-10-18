@@ -7,7 +7,6 @@ Database is using MySQL and I'm not going to attach the database here, and anyon
 
 This system was to solve some asset managemt issue, expecially for Infra team 10 years ago. I spent 3 weeks to delelop using PHP, JS and HTML. 
 
-/*
  * ---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
  * ---------------------------------------------------------------
@@ -28,4 +27,3 @@ This system was to solve some asset managemt issue, expecially for Infra team 10
  *
  * NOTE: If you change these, also change the error_reporting() code below
  *
- */
