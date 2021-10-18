@@ -1,0 +1,434 @@
+/* --------------------------------------------------------------
+   GLOBAL
+-------------------------------------------------------------- */
+
+body {
+    padding:0;
+    margin:0;
+    z-index:0;
+    height: 100%;
+}
+body, td, th {
+    font-size: 12px;
+}
+
+#headerWrapper{
+    padding:0;
+    margin:0;
+    height:50px;
+    width:100%;
+    position:relative;
+    z-index:1;
+}
+#bodyContentWrapper{
+    min-width:900px;
+    max-width:1200px;
+    min-height:120px;
+    position:relative;
+    background-color: #FFFFFF;
+}
+form {
+    margin: 0;
+    padding: 0;
+}
+input, select, textarea {
+    font-family: Trebuchet MS,Arial,san-serif;
+    font-size: 12px;
+    color: #666;
+}
+
+/* --------------------------------------------------------------
+   LAYERS
+-------------------------------------------------------------- */
+
+#logo{
+    padding:0px;
+    margin:0px;
+    background: url(images/sprite.png) no-repeat 0 0;
+    height:64px;
+    width:255px;
+    position:absolute;
+    top:25px;
+    left:0px;
+}
+
+#topnav {
+    max-width: 1200px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #ACCBFF;
+    text-align: left;
+    margin: 0 auto;
+    height: 90px;
+    padding: 0;
+}
+#topnav #welcome {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+#topnav #date {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    float: right;
+    color: #2E6194;
+    font-size: 11px;
+}
+
+#topnav #date{
+    color: #2E6194;
+    font-family: Tahoma,helvectica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#content_container {
+    text-align: left;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1200px;
+}
+#content_container #left_side {
+    text-align: left;
+    width: 174px;
+    margin:0;
+    padding:0;
+    float:left;
+    height: 100%;
+    overflow: hidden;
+}
+#content_container #content {
+    text-align: left;
+    padding: 0;
+    margin-left:1px;
+}
+#content_container #content #content_padded {
+    text-align: left;
+    width: 100%;
+    margin:0;
+}
+#content_container #content #content_padded #tab_content {
+    text-align: left;
+    background-color: #F5F5F5;
+    margin: 0px;
+    padding: 10px;
+}
+#footer {
+    background-color: #ECECEC;
+    border-top: 1px solid #DDD;
+    text-align:center;
+    padding: 15px;
+    bottom:0;
+}
+
+/* --------------------------------------------------------------
+   HEADERS
+-------------------------------------------------------------- */
+
+h1 {
+    display: block;
+    background-color: #FFF;
+    height: 35px;
+    color: #2E6194;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+/* --------------------------------------------------------------
+   LINKS
+-------------------------------------------------------------- */
+
+a, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+a img {
+    border: 0;
+}
+a.highlight, a.highlight:visited {
+    color: #8a0000;
+    text-decoration: none;
+}
+a.highlight:hover {
+    color: #666666;
+}
+#topnav a, #topnav a:visited {
+    color: red;
+    text-decoration: none;
+}
+#topnav a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#content_container #left_side ul.menu li a, #content_container #left_side ul.menu li a:visited {
+    display: block;
+    background-color: #F5F5F5;
+    width: 169px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+#content_container #left_side ul.menu li a:hover {
+    background-color: #EBEBEB;
+    color: #333;
+}
+#content_container #content #content_padded #tabs ul li a, #content_container #content #content_padded #tabs ul li a:visited, #content_container #content #content_padded #tabs ul li a:hover {
+    display: block;
+    background-color: #F5F5F5;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 25px;
+    height: 25px;
+    color: #333;
+    text-decoration: none;
+}
+#content_container #content #content_padded #tabs ul li.tabselected a, #content_container #content #content_padded #tabs ul li.tabselected a:visited, #content_container #content #content_padded #tabs ul li.tabselected a:hover {
+    font-weight: bold;
+}
+#content_container #content #content_padded #clienttabs ul li a, #content_container #content #content_padded #clienttabs ul li a:visited, #content_container #content #content_padded #clienttabs ul li a:hover {
+    display: block;
+    background-color: #F5F5F5;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 25px;
+    height: 25px;
+    color: #333;
+    text-decoration: none;
+}
+#content_container #content #content_padded #clienttabs ul li.tabselected a, #content_container #content #content_padded #clienttabs ul li.tabselected a:visited, #content_container #content #content_padded #clienttabs ul li.tabselected a:hover {
+    font-weight: bold;
+}
+
+table.datatable th, table.datatable th a, table.datatable th a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+table.datatable th a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+table.datatable tr:hover td {
+    background-color: #EFF2F9;
+}
+#content_container #left_side ul.menu {
+    list-style-type: none;
+    margin: 0 0 15px 0;
+    padding: 0;
+    border-top: 0;
+    width: 187px;
+    border-bottom: 1px solid #EBEBEB;
+}
+#content_container #content #content_padded #tabs ul, #content_container #content #content_padded #clienttabs ul {
+    display: block;
+    background-color: #FFF;
+    height: 26px;
+    line-height: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    border-bottom: 1px solid #CCCCCC;
+}
+#content_container #content #content_padded #tabs ul li, #content_container #content #content_padded #clienttabs ul li {
+    float: left;
+    padding: 0;
+    margin: 0 0 0 7px;
+}
+
+/* --------------------------------------------------------------
+   TABLES
+-------------------------------------------------------------- */
+
+table.form {
+    background-color: #EBEBEB;
+    padding: 0px;
+    border: 1px solid #CCC;
+}
+table.form td {
+    font-size: 12px;
+}
+table.form td.fieldlabel {
+    background-color: #efefef;
+    text-align: top;
+}
+table.form td.fieldarea {
+    background-color: #efefef;
+    text-align: top;
+}
+table.datatable {
+    padding: 0;
+    margin: 0;
+}
+table.datatable th {
+    background-color: #1A4D80;
+    font-weight: bold;
+    text-align: center;
+}
+table.datatable td {
+    background-color: #FFF;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 12px;
+}
+table.datatable tr.rowhighlight td {
+    background-color: #EFF2F9;
+}
+
+/* --------------------------------------------------------------
+   IMAGES
+-------------------------------------------------------------- */
+
+#logo_container img.banner {
+    float: left;
+    border: 0;
+}
+
+/* --------------------------------------------------------------
+   SPECIAL CLASSES
+-------------------------------------------------------------- */
+
+.absmiddle {
+    vertical-align: middle;
+}
+.clear {
+    clear: both;
+}
+.smallfont {
+    font-size: 12px;
+}
+.tablebg {
+    background-color: #FFF;
+}
+#content_container #left_side .header {
+    background: url(../images/sprite.png) no-repeat -109px -82px;
+    color: #FFF;
+    font-size: 12px;
+    border-bottom: 0;
+    display: block;
+    width: 169px;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 0 10px;
+    margin: 0;
+}
+#content_container #left_side .plain_header {
+    display: block;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    width: 189px;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 1px solid #CCC;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+/* --------------------------------------------------------------
+   INFO BOXES
+-------------------------------------------------------------- */
+
+.infobox {
+    background-image: url('../../images/warning.gif');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px 5px 10px 5px;
+    padding: 5px 5px 5px 45px;
+    background-color: #FCF9D2;
+    border: 1px solid #F9D43E;
+    text-align: left;
+}
+.contentbox {
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 1px dashed #cccccc;
+    padding: 10px;
+}
+.errorbox {
+    border: 1px dashed #cc0000;
+    font-weight: bold;
+    background-color: #FBEEEB;
+    text-align: center;
+    padding: 10px;
+    color: #cc0000;
+}
+.invoicetooltip {
+    background-color: #888888;
+    color: #000000;
+    padding: 5px;
+    z-index: 1;
+}
+
+/* --------------------------------------------------------------
+   TEXT COLORS
+-------------------------------------------------------------- */
+
+.textblack {
+    color: #000000;
+}
+.textblue {
+    color: #224488;
+}
+.textgreen {
+    color: #779500;
+}
+.textgrey {
+    color: #888888;
+}
+.textgold {
+    color: #ffbb55;
+}
+.textorange {
+    color: #ff6600;
+}
+.textred {
+    color: #cc0000;
+}
+
+.msg {
+    background-color: #FCF9D2;
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #F9D43E;
+    margin: 10px 5px;
+    text-align: left;
+}
+.error {
+    background-color: #FCF9D2;
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #F9D43E;
+    margin: 10px 5px;
+    padding: 5px 0 5px 5px;
+    text-align: left;
+}
+#logout a.highlight:visited {
+    color: #8a0000;
+    text-decoration: none;
+}
+#logout a:hover {
+    color: #666666;
+}
+#logout a, #logout a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+#logout a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}

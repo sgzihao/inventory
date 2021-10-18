@@ -1,0 +1,86 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class Category extends Admin_Controller {
+
+    public function __construct() {
+        // Call the parent's constructor method
+        parent::Admin_Controller();
+        //$this->load->model('provider/provider_m', 'model_p');
+        $this->load->model('category/category_m', 'model_category');
+		$this->load->model('category/categorylist_m', 'model_category_info');
+    }
+
+    public function index() {
+		
+		$this->form_validation->set_rules('categoryname', 'Category Name', 'required');
+
+        if ($this->form_validation->run() != FALSE){
+			$this->model_cp->insert_corp($_POST);
+		}
+
+        //get the total count of the corp list.
+        $totalNumber = $this->model_category->getCategoryTotalNum();
+		$config['base_url'] = 'http://localhost/inventory/index.php/category/index/page';
+		$config['total_rows'] = $totalNumber;
+		
+		$this->pagination->initialize($config); 
+		
+		//Get the Current page number.
+		$startIndex = ($this->uri->segment(4) > 0)? ($this->uri->segment(4)):0;
+		
+		$categoryinfo = $this->model_category_info->getcategorylistinfo();
+		//var_dump($categoryinfo) ; 
+		foreach ($categoryinfo as $row) {
+			$parentid[$row->id] = $row->parentid;
+			$subid[$row->parentid][] = $row->id;
+			$name[$row->id] = $row->name;
+		}
+		$categorylistinfo = $this->model_category_info->print_list($subid[0],$subid,$name);
+
+        $this->template
+                ->title('Category Management')
+                ->set('title_info', 'Category List')
+				->set('category_data',$this->model_category->getCategoryList(null,$startIndex))
+				->set('paginationlinks',$this->pagination->create_links())
+				->set('categorylistinfo',$categorylistinfo)
+				->set('totalNumber',$totalNumber)
+                ->build('category/list.php');
+    }
+	/**
+     * 
+     */
+    public function newcategory() {
+
+        $this->form_validation->set_rules('categoryname', 'Category Name', 'required');
+
+        if ($this->form_validation->run() == FALSE){
+			//show_error('test');
+			$this->template
+                    ->title('Category Management')
+                    ->set('title_info', 'New Category')
+                    ->build('category/add.php');
+		}
+        else {
+            $this->model_category->addNewCategory($_POST);
+            redirect('category/corplist');
+        }
+    }
+    public function updatecategory() {
+
+        $this->form_validation->set_rules('pname', '发卡结构名称', 'required');
+
+        if ($this->form_validation->run() == FALSE)
+            $this->template
+                    ->title('修改发卡商户信息')
+                    ->set('title_info', '修改发卡商户基本信息')
+                    ->set('p_data', $this->model_p->get_profile())
+                    ->build('provider/updateprovider.php');
+        else {
+            $this->model_p->update_provider($_POST);
+            redirect('provider/');
+        }
+    }
+}

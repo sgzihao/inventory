@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link type="text/css" href="menu/menu.css" rel="stylesheet" />
+        <link type="text/css" href="css/main.css" rel="stylesheet" />
+        <link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+        <script type="text/javascript" src="jquery/js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="jquery/js/jquery-ui-1.8.18.custom.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                // Tabs
+                $('#tabs').tabs();
+                
+                //hover states on the static widgets
+                $('#dialog_link, ul#icons li').hover(
+                function() { $(this).addClass('ui-state-hover'); }, 
+                function() { $(this).removeClass('ui-state-hover'); }
+            );	
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="headerinfo">
+                <span class="sysinfo"></span>
+            </div>
+
+            <div id="header">
+                <img width="329" height="64" border="0" title="Inventory System" alt="example.com" class="logo" src="assets/GS2.GIF">
+            </div>
+
+            <div id="main_content">
+
+                <div id="menu">
+                    <ul class="menu">
+                        <li><a href="#" class="parent"><span>Home</span></a>
+                            <div><ul>
+                                    <li><a href="#"><span>Sub Item 2</span></a></li>
+                                    <li><a href="#"><span>Sub Item 3</span></a></li>
+                                </ul></div>
+                        </li>
+                        <li><a href="#" class="parent"><span>Product Info</span></a>
+                            <div><ul>
+                                    <li><a href="#"><span>Sub Item 3</span></a></li>
+                                    <li><a href="#"><span>Sub Item 4</span></a></li>
+                                    <li><a href="#"><span>Sub Item 5</span></a></li>
+                                    <li><a href="#"><span>Sub Item 6</span></a></li>
+                                    <li><a href="#"><span>Sub Item 7</span></a></li>
+                                </ul></div>
+                        </li>
+                        <li><a href="#"><span>Help</span></a></li>
+                        <li class="last"><a href="#"><span>Contacts</span></a></li>
+                    </ul>
+                </div>
+                <!-- Tabs -->
+                <h1>Tabs</h1>
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">First</a></li>
+                        <li><a href="#tabs-2">Second</a></li>
+                        <li><a href="#tabs-3">Third</a></li>
+                    </ul>
+                    <div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    <div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+                    <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="copyright">Copyright &copy; 2012 <a href="http://www.example.com/">sgzihao</a></div>
+
+    </body>
+</html>

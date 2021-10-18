@@ -1,0 +1,246 @@
+body { 
+    background:#171717;
+    margin:0 auto 0 auto;
+}
+div#menu {
+    width:100%;
+}
+div#copyright {
+    margin:0 auto;
+    width:100%;
+    font:11px 'Trebuchet MS';
+    color:#124a6f;
+    text-align: center;
+    text-indent:20px;
+    padding:30px 0 10px 0;
+}
+div#copyright a { color:#4682b4; }
+div#copyright a:hover { color:#124a6f; }
+/** CUSTOM CLASSES **/
+#container {
+    width: 88%;
+    margin:0 auto 0 auto;
+}
+#headerinfo {
+    text-align: right;
+    background-color: #FFFFFF;
+    padding:1px 10px 0 0;
+}
+#header {
+    text-align: left;
+    background-color: #FFFFFF;
+    padding: 5px 0 10px 2px;
+}
+#main_content {
+    font-size: 12px;
+    color: #000000;
+    text-align: left;
+    background-color: #FFFFFF;
+}
+#content {
+    font-size: 12px;
+    color: #000000;
+    text-align: left;
+    background-color: #FFFFFF;
+    padding: 10px 2px 30px 2px;
+}
+.sysinfo {
+    text-align: right;
+    font-family: Tahoma,helvectica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h1 {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    color: #2E6194;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    height: 30px;
+    margin: 10px;
+    padding: 0;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+input, select, textarea {
+    font-family: Trebuchet MS,Arial,san-serif;
+    font-size: 12px;
+    color: #666;
+}
+
+/* --------------------------------------------------------------
+   LINKS
+-------------------------------------------------------------- */
+
+a, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+a img {
+    border: 0;
+}
+a.highlight, a.highlight:visited {
+    color: #8a0000;
+    text-decoration: none;
+}
+a.highlight:hover {
+    color: #666666;
+}
+
+/* --------------------------------------------------------------
+   TABLES
+-------------------------------------------------------------- */
+
+table.form {
+    background-color: #EBEBEB;
+    padding: 0px;
+    border: 1px solid #CCC;
+}
+table.form td {
+    font-size: 12px;
+}
+table.form td.fieldlabel {
+    background-color: #efefef;
+    text-align: top;
+}
+table.form td.fieldarea {
+    background-color: #efefef;
+    text-align: top;
+}
+table.datatable {
+    padding: 0;
+    margin: 0;
+}
+table.datatable th {
+    background-color: #1A4D80;
+    font-weight: bold;
+    text-align: center;
+}
+table.datatable td {
+    background-color: #FFF;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 12px;
+}
+table.datatable tr.rowhighlight td {
+    background-color: #EFF2F9;
+}
+
+.tablebg {
+    background-color: #FFF;
+}
+
+table.datatable th, table.datatable th a, table.datatable th a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+table.datatable th a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+table.datatable tr:hover td {
+    background-color: #EFF2F9;
+}
+
+/* --------------------------------------------------------------
+   INFO BOXES
+-------------------------------------------------------------- */
+
+.infobox {
+    background-image: url('../../images/warning.gif');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px 5px 10px 5px;
+    padding: 5px 5px 5px 45px;
+    background-color: #FCF9D2;
+    border: 1px solid #F9D43E;
+    text-align: left;
+}
+.contentbox {
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 1px dashed #cccccc;
+    padding: 10px;
+}
+.errorbox {
+    border: 1px dashed #cc0000;
+    font-weight: bold;
+    background-color: #FBEEEB;
+    text-align: center;
+    padding: 10px;
+    color: #cc0000;
+}
+.invoicetooltip {
+    background-color: #888888;
+    color: #000000;
+    padding: 5px;
+    z-index: 1;
+}
+
+/* --------------------------------------------------------------
+   TEXT COLORS
+-------------------------------------------------------------- */
+
+.textblack {
+    color: #000000;
+}
+.textblue {
+    color: #224488;
+}
+.textgreen {
+    color: #779500;
+}
+.textgrey {
+    color: #888888;
+}
+.textgold {
+    color: #ffbb55;
+}
+.textorange {
+    color: #ff6600;
+}
+.textred {
+    color: #cc0000;
+}
+
+.msg {
+    background-color: #FCF9D2;
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #F9D43E;
+    margin: 10px 5px;
+    text-align: left;
+}
+.error {
+    background-color: #FCF9D2;
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #F9D43E;
+    margin: 10px 5px;
+    padding: 5px 0 5px 5px;
+    text-align: left;
+}
+#logout a.highlight:visited {
+    color: #8a0000;
+    text-decoration: none;
+}
+#logout a:hover {
+    color: #666666;
+}
+#logout a, #logout a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+#logout a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}

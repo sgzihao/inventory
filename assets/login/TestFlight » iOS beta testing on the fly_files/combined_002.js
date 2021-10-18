@@ -1,0 +1,1 @@
+$(function(){$(".nav a[data-team-id]").click(function(){teamChangeForm=$("#team-change");$("#team",teamChangeForm).val($(this).data("teamId"));teamChangeForm.submit();return false})});
