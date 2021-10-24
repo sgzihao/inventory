@@ -7,15 +7,17 @@ This inventory management system was writtin in the PHP programming language in 
 
 Database is using MySQL and I'm not going to attach the database here, and anyone is interested in this project, I could share the database table structure.
 
+Upload the database schema on 24 Oct 2021.
+
 This system was to solve some asset managemt issue, expecially for Infra team 10 years ago. I spent 3 weeks in deleloping using PHP, JS and HTML. 
 
  ---------------------------------------------------------------
  APPLICATION ENVIRONMENT
  ---------------------------------------------------------------
 
- 	  sgzihao@gmail.com
- 		2011-11
- 		Beta version 1.0
+ 	sgzihao@gmail.com
+ 	2011-11
+ 	Beta version 1.0
 
  You can load different configurations depending on your
  current environment. Setting the environment also influences
